@@ -116,7 +116,7 @@
         <OutArgument x:TypeArguments="x:String">[FoodItem]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Browser Chrome: New chat" sap:VirtualizedContainerService.HintSize="434,1091" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="c3089de1-93ab-48b2-8216-a52fdb206387" Version="V2" WebDriverMode="Disabled" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Open ChatGpt" sap:VirtualizedContainerService.HintSize="434,1091" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="c3089de1-93ab-48b2-8216-a52fdb206387" Version="V2" WebDriverMode="Disabled" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -131,18 +131,18 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TEXTAREA'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="c3089de1-93ab-48b2-8216-a52fdb206387" Text="[&quot;what are the side effect of eating &quot;+FoodItem+ &quot; and what is alternative snack? . Give the informations in bullet points and in few words&quot;]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Typing Into ChatGPT" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="c3089de1-93ab-48b2-8216-a52fdb206387" Text="[&quot;what are the side effect of eating &quot;+FoodItem+ &quot; and what is alternative snack? . Give the informations in bullet points and in few words&quot;]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://chat.openai.com/chat" DesignTimeRectangle="454, 639, 750, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'TEXTAREA'" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TEXTAREA' type='' class='m-0 w-full resize-none border-0 bg-transparent p-0 pl-2 pr-7 focus:ring-0 focus-visible:ring-0 dark:bg-transparent md:pl-0' aaname='' /&gt;" Guid="28014135-7578-4594-b297-08818f72eba3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAvIAAAAcCAYAAAADSluXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGwSURBVHhe7d0/S0JhGMbhPlLlaWgoaqihBoMMMtDFQYNqraGhtYaG1hr6pifeczhhefoDPgd84RIuHBTnHw+3ura33y8BAIA8rG9sl5vFTinkAQAgIynke8WukAcAgJxUF/mekAcAgKwsXOTTY/4NAADA6qlCvje3kRfyAACw+uqQd5EHAICs1Bt5F3kAAMiKaQ0AAGRIyAMAQJCDw0F5Prysnttej1SFvF+tAQCA5Q0vZuXz83v5+PhaTmd3nQa9izwAAAQ5Oh5WId/oMujrkHeRBwCAEA8PL19ivqugTyG/WbjIAwBAiKur+4WQb0QGfb2RF/IAABCifzJujfh5EUFfXeRt5AEAIE6K+cHZ5NNofP1j0Kddfdtn/KW+yNvIAwBAmBTyp4PJp9H4pjXkn57elgt5F3kAAIjxn2lNCvjp9HbpaY2NPAAABPnty64RAd+oNvJCHgAAYrT9/GRkwDds5AEAIMj3P4TqIuAbNvIAABBkeDHrPOAbLvIAABAkhXuK+S4DvuEiDwAAGaov8kIeAACyshDyAADA6hPyAACQoYWNPAAAsPpSyBdbu+UHBXubUBQxwhIAAAAASUVORK5CYII=" InformativeScreenshot="3e8cc181b613b6f46f9c68eb60452b1c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='New chat' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="10" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="338,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" InteractionMode="WindowMessages" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
-            <uix:NGetText DisplayName="Get Text 'UL'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="c3089de1-93ab-48b2-8216-a52fdb206387" TextString="[infoFood]" Version="V3">
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="10" DisplayName="Confirming the Input" sap:VirtualizedContainerService.HintSize="338,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" InteractionMode="WindowMessages" ScopeIdentifier="c3089de1-93ab-48b2-8216-a52fdb206387" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+            <uix:NGetText DisplayName="Get The Information from ChatGPT" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="c3089de1-93ab-48b2-8216-a52fdb206387" TextString="[infoFood]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://chat.openai.com/chat" DesignTimeRectangle="491, 200, 653, 252" DesignTimeScaleFactor="1" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl tag='UL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='UL' type='' class='' aaname='' /&gt;" Guid="6ffffd19-4d7e-471a-8499-3fc6b72b01e4" InformativeScreenshot="79e503a23d9dfa9495004df40e7fbdcc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Side Effects of Fried Chicken.' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
               </uix:NGetText.Target>
             </uix:NGetText>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="338,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[infoFood]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="This is my suggestion" sap:VirtualizedContainerService.HintSize="338,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[infoFood]" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
