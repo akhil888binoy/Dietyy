@@ -46,7 +46,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="106">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -125,7 +125,7 @@
           <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="498,1276" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="InfoAboutFood" />
-              <Variable x:TypeArguments="scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))" Name="FoodInfo" />
+              <Variable x:TypeArguments="x:String" Name="Food" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -144,7 +144,7 @@
                   <ActivityFunc.Argument>
                     <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
                   </ActivityFunc.Argument>
-                  <p:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="auto" Profile="Screen" Result="[FoodInfo]" Scale="1" Timeout="100000" />
+                  <p:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="auto" Profile="Screen" Scale="1" Text="[Food]" Timeout="100000" />
                 </ActivityFunc>
               </ui:GetOCRText.OCREngine>
               <ui:GetOCRText.Target>
@@ -174,7 +174,7 @@
                 </Sequence>
               </ui:CommentOut.Body>
             </ui:CommentOut>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="436,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[FoodInfo]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="436,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[Food]" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
