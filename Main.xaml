@@ -124,8 +124,8 @@
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,889" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="InfoAboutFood" />
               <Variable x:TypeArguments="x:String" Name="Food" />
+              <Variable x:TypeArguments="x:String" Name="InfoAboutFood" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -137,8 +137,8 @@
                 <uix:TargetAnchorable BrowserURL="https://chat.openai.com/chat" DesignTimeRectangle="454, 639, 750, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'TEXTAREA'" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TEXTAREA' type='' class='m-0 w-full resize-none border-0 bg-transparent p-0 pl-2 pr-7 focus:ring-0 focus-visible:ring-0 dark:bg-transparent md:pl-0' aaname='' /&gt;" Guid="28014135-7578-4594-b297-08818f72eba3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAvIAAAAcCAYAAAADSluXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGwSURBVHhe7d0/S0JhGMbhPlLlaWgoaqihBoMMMtDFQYNqraGhtYaG1hr6pifeczhhefoDPgd84RIuHBTnHw+3ura33y8BAIA8rG9sl5vFTinkAQAgIynke8WukAcAgJxUF/mekAcAgKwsXOTTY/4NAADA6qlCvje3kRfyAACw+uqQd5EHAICs1Bt5F3kAAMiKaQ0AAGRIyAMAQJCDw0F5Prysnttej1SFvF+tAQCA5Q0vZuXz83v5+PhaTmd3nQa9izwAAAQ5Oh5WId/oMujrkHeRBwCAEA8PL19ivqugTyG/WbjIAwBAiKur+4WQb0QGfb2RF/IAABCifzJujfh5EUFfXeRt5AEAIE6K+cHZ5NNofP1j0Kddfdtn/KW+yNvIAwBAmBTyp4PJp9H4pjXkn57elgt5F3kAAIjxn2lNCvjp9HbpaY2NPAAABPnty64RAd+oNvJCHgAAYrT9/GRkwDds5AEAIMj3P4TqIuAbNvIAABBkeDHrPOAbLvIAABAkhXuK+S4DvuEiDwAAGaov8kIeAACyshDyAADA6hPyAACQoYWNPAAAsPpSyBdbu+UHBXubUBQxwhIAAAAASUVORK5CYII=" InformativeScreenshot="3e8cc181b613b6f46f9c68eb60452b1c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='New chat' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="50" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="338,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
-            <ui:GetOCRText Text="{x:Null}" WordsInfo="{x:Null}" DisplayName="Get OCR Text 'UL'" sap:VirtualizedContainerService.HintSize="338,172" sap2010:WorkflowViewState.IdRef="GetOCRText_2">
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="15" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="338,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+            <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'UL'" sap:VirtualizedContainerService.HintSize="338,172" sap2010:WorkflowViewState.IdRef="GetOCRText_2">
               <ui:GetOCRText.OCREngine>
                 <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
                   <ActivityFunc.Argument>
@@ -157,8 +157,11 @@
                   </ui:Target.WaitForReady>
                 </ui:Target>
               </ui:GetOCRText.Target>
+              <ui:GetOCRText.Text>
+                <OutArgument x:TypeArguments="x:String">[InfoAboutFood]</OutArgument>
+              </ui:GetOCRText.Text>
             </ui:GetOCRText>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="338,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[Food]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="338,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[InfoAboutFood]" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
