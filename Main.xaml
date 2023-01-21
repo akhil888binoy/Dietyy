@@ -118,7 +118,7 @@
         <OutArgument x:TypeArguments="x:String">[FoodItem]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="434,239" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="List Allergies or Medical conditions you have" Title="Allergies/Medical Condition">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Allergies / Medical Condition" sap:VirtualizedContainerService.HintSize="434,239" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="List Allergies or Medical conditions you have" Title="Allergies/Medical Condition">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[MedicalConditions]</OutArgument>
       </ui:InputDialog.Result>
